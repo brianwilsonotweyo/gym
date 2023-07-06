@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Audio Novels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span class="auto-type"></span></h1>
+        <button class="auto-type-btn">Read a Novel</button>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Welcome to Quirky Audio Novels"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            onComplete: function () {
+                document.querySelector('.auto-type-btn').style.display = 'block';
+                document.querySelector('.auto-type-btn').classList.add('flashing-animation');
+            },
+            loop: false
+        });
+    </script>
+</body>
+</html>
