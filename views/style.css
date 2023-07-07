@@ -79,4 +79,44 @@
       font-size: 30px;
     }
   }
-  
+  .auto-type-title {
+    color: #fff724;
+}
+
+.auto-type-btn {
+    display: none;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #fff724;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.auto-type-synopsis {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.auto-type-title {
+  color: #fff724;
+  font-size: 40px;
+}
+
+.auto-type-synopsis {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .auto-type-title {
+      font-size: 60px;
+  }
+
+  .auto-type-synopsis {
+      font-size: 24px;
+  }
+}
+
