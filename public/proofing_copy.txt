@@ -1,0 +1,763 @@
+MetaQuest Abridged
+
+{(set: $enter_the_void to 0)
+(set: $ERROR to $ERROR +1)(set: $death to false)}
+<pre style="line-height:1">
+             _          ____                 _   
+  /\/\   ___| |_ __ _  /___ \_   _  ___  ___| |_ 
+ /    \ / _ \ __/ _` |//  / / | | |/ _ \/ __| __|
+/ /\/\ \  __/ || (_| / \_/ /| |_| |  __/\__ \ |_ <br>\/    \/\___|\__\__,_\___,_\ \__,_|\___||___/\__|
+</pre>(if: $ERROR <2)[|typed-speed0>[
+ERROR
+
+Much to your disappointment, you find yourself trapped in a text adventure. Perhaps it will pass, or perhaps it is best to push on through.
+
+[[Attempt to wait it out.|The End]]
+
+[[Try to survive the text.|Setting the Table]]]]
+(if: $ERROR > 1)[ERROR
+
+Much to your disappointment, you find yourself trapped in a text adventure. Perhaps it will pass, or perhaps it is best to push on through.
+
+[[Attempt to wait it out.|The End]]
+
+[[Try to survive the text.|Setting the Table]]]
+
+(set: $THEEND to $THEEND +1)
+
+(if: $THEEND <2)[|typed-speed0>[THE END
+
+Oh. Much to your surprise, you are able to exit this amateur story by closing your web browser. The suddenness of this ending reminds you of how fleeting and temporary life is.
+
+[[...you hit the refresh button anyways.|ERROR]]]]
+(if: $THEEND >1)[THE END
+
+Oh. Much to your surprise, you are able to exit this amateur story by closing your web browser. The suddenness of this ending reminds you of how fleeting and temporary life is.
+
+[[...you hit the refresh button anyways.|ERROR]]]
+{(set: $emerald to false)
+(set: $vorpal_blade to false)
+(set: $debt_blade to false)
+(set: $orc_meeting to false)
+(set: $rat_chaos to false)
+(set: $SETTING to $SETTING +1)}(if: $SETTING <2)[|typed-speed0>[(if: $enter_the_void is 1)[SETTING THE TABLE
+
+To your left, there is an older yet well-used building that is clearly an inn or tavern. Snippets of conversation, friendly shouts, and fiddle music leaks out through the glowing windows.
+
+[[Do nothing.|The End]]
+
+[[Enter the Tavern.|An Entrance]]](else:)[SETTING THE TABLE
+You find yourself on a muddy path at the entrance of a strange town. It is one of those nights where a storm seems imminent - dark clouds are accompanied by a warm wind. 
+To your left, there is an older yet well-used building that is clearly an inn or tavern. Snippets of conversation, friendly shouts, and fiddle music leak out through the glowing windows. There is nobody outside save for you, barefoot and reeling from the unexpected immersion of the text adventure. It all seems vaguely familiar.
+To your right, a small table is occupied by a pair of horses - one chestnut, the other a green bay. Soft horsey noises and the recognizable smell of manure drift from their general direction.
+[[Do nothing.|The End]]
+
+[[Approach the horses.|The Typo]]]
+
+[[Enter the Tavern.|An Entrance]]]]](if: $SETTING >1)[(if: $enter_the_void is 1)[SETTING THE TABLE
+
+To your left, there is an older yet well-used building that is clearly an inn or tavern. Snippets of conversation, friendly shouts, and fiddle music leaks out through the glowing windows.
+
+[[Do nothing.|The End]]
+
+[[Enter the Tavern.|An Entrance]]](else:)[SETTING THE TABLE
+You find yourself on a muddy path at the entrance of a strange town. It is one of those nights where a storm seems imminent - dark clouds are accompanied by a warm wind. 
+To your left, there is an older yet well-used building that is clearly an inn or tavern. Snippets of conversation, friendly shouts, and fiddle music leak out through the glowing windows. There is nobody outside save for you, barefoot and reeling from the unexpected immersion of the text adventure. It all seems vaguely familiar.
+To your right, a small table is occupied by a pair of horses - one chestnut, the other a green bay. Soft horsey noises and the recognizable smell of manure drift from their general direction.
+
+[[Do nothing.|The End]]
+
+[[Approach the horses.|The Typo]]]
+
+[[Enter the Tavern.|An Entrance]]]]
+
+{(set: $entrance to $entrance +1)}
+(if: $entrance <2)[|typed-speed0>[AN ENTRANCE
+
+The heavy door of the tavern opens with ease, buffeting you with warm air - air that is packed with the comforting smell of ale, the sharper tang of wine, and the homely scent of ripe cheese. 
+
+Seconds previous, the tavern had been lively with the sound of merriment. Now, accompanying your entrance, the entire place has gone silent. Every single face looks to yours for an introduction.
+
+[[Offer a cautious and awkwardly timid hello.|The First Real Choice]]
+
+[[Don't say anything and hope nobody notices you.|The First Real Choice]]]]
+(if: $entrance >1)[AN ENTRANCE
+
+The heavy door of the tavern opens with ease, buffeting you with warm air - air that is packed with the comforting smell of ale, the sharper tang of wine, and the homely scent of ripe cheese. 
+
+Seconds previous, the tavern had been lively with the sound of merriment. Now, accompanying your entrance, the entire place has gone silent. Every single face looks to yours for an introduction.
+
+[[Offer a cautious and awkwardly timid hello.|The First Real Choice]]
+
+[[Don't say anything and hope nobody notices you.|The First Real Choice]]]
+{(set: $void to $void+1)(set: $enter_the_void to 1)}
+<pre style="line-height:1"> .:iiiiiiiiiiiiiiiiii+-     
+.++iiiiiiiiiiiiii:///+yhy:-`  
+sss:` .`                  .:+-
+ ydysmhy-                 `-s+
+ /`.o/y+yyysssssyyyyysss++/-o 
+ .o-:-y+--           -+-  `-y 
+  s-:/do--...`......./yo:/::o 
+  /.  :s-.-.-.......-os-`  -- 
+  `/  `s             +/    +  
+   +   y             o:    o  
+   /`  y`            s-    +  
+   .:  s.            o-   -:  
+    o` +/            s:  .s`  
+    oo/sy:-.      `.-ho://+   
+    /ysy/-/+++/+o+//:m+ohy/   
+      .::+++++ooo+++oo+:`     
+</pre>(if: $void <2)[|typed-speed0>[ENTER THE VOID
+Somehow you have found your way back to the street. After about thirty seconds, rain begins to - well, rain down from the heavens. While at first only drops, soon the downpour escalates to buckets. You are struck in the head by one of the said buckets, and collapse into a muddy pile of unused narrative. By making no choice, you have starved yourself of free will. 
+
+[[Let go of your earthly tether. Empty, and become wind.|Welcome Back]]]]
+(if: $void >1)[ENTER THE VOID
+Somehow you have found your way back to the street. After about thirty seconds, rain begins to - well, rain down from the heavens. While at first only drops, soon the downpour escalates to buckets. You are struck in the head by one of the said buckets, and collapse into a muddy pile of unused narrative. By making no choice, you have starved yourself of free will. 
+
+[[Let go of your earthly tether. Empty, and become wind.|Welcome Back]]]
+(mouseover: "ysssssyy")[You have found a secret message. You are filled with determination.]
+(set: $immersed to $immersed +1)(if: $immersed <2)[|typed-speed0>[YOU ARE NOT IMMERSED
+
+With an eyebrow raised, you suddenly become hyper-aware of your body as you sit in front of your computer. Your soft, muscley tongue sits heavy in your mouth, which is filled with saliva and sharp, sharp teeth. Your posture is bad, and you wonder if anyone notices. You are a little hungry, but not so much so that you would bother getting up and getting something to eat. No, you are trapped: either by laziness, the duty of a scholar, or the author's design - you must press on.
+
+[[You resist the fact that your fate is controlled with illusionary choice, and wait for the text to stop bombarding you.|The End]]
+
+[[You pick the second choice, mostly because you already picked the first one and did not like where it took you.|Setting the Table]]]]
+(if: $immersed >1)[YOU ARE NOT IMMERSED
+
+With an eyebrow raised, you suddenly become hyper-aware of your body as you sit in front of your computer. Your soft, muscley tongue sits heavy in your mouth, which is filled with saliva and sharp, sharp teeth. Your posture is bad, and you wonder if anyone notices. You are a little hungry, but not so much so that you would bother getting up and getting something to eat. No, you are trapped: either by laziness, the duty of a scholar, or the author's design - you must press on.
+
+[[You resist the fact that your fate is controlled with illusionary choice, and wait for the text to stop bombarding you.|The End]]
+
+[[You pick the second choice, mostly because you already picked the first one and did not like where it took you.|Setting the Table]]]
+(set: $real to $real +1)(if: $real <2)[|typed-speed0>[A REAL, MEANINGFUL CHOICE
+The locals do not seem to care if or how you address them. As quickly as the tumult has ceased, the party resumes with a cacophony of joyous noisemaking. As your eyes become accustomed to the bright lanterns, you notice that there is something strange about these people. For one, they clearly aren't all local. Also, they aren't all <i>human</i>.
+With a gasp, you realize that you aren't in any old text adventure. You're in a <i>fantasy</i> text adventure, one in which italics are used <i>gratuitously</i>.
+The spread of revelers is as stereotypical as could be: there are burly men and rosy-cheeked women; a stout dwarf with an exceedingly long braided beard; a shady-looking hooded fellow adorned in black and a variety of daggers; a tall, elegant lady with eyes as sharp as diamonds and ears as pointy as your cursor. There is someone in the corner, too. The figure is shrouded by shadow, but the soft glow of a pipe partially illuminates a wizardly staff. 
+"Are you gonna just stand in the doorway and stare?" says the hefty dwarf, interrupting your reading. "Come then, traveler. I challenge you to a drinking contest!" 
+
+[[You don't drink anymore, after that one night.|Sobriety is for Winners]]
+
+[[You succumb to the social pressure, and try to fit in.|Just Kidding, There Is No Such Thing As Choice]]]](if: $real >1)[A REAL, MEANINGFUL CHOICE
+The locals do not seem to care if or how you address them. As quickly as the tumult has ceased, the party resumes with a cacophony of joyous noisemaking. As your eyes become accustomed to the bright lanterns, you notice that there is something strange about these people. For one, they clearly aren't all local. Also, they aren't all <i>human</i>.
+With a gasp, you realize that you aren't in any old text adventure. You're in a <i>fantasy</i> text adventure, one in which italics are used <i>gratuitously</i>.
+The spread of revelers is as stereotypical as could be: there are burly men and rosy-cheeked women; a stout dwarf with an exceedingly long braided beard; a shady-looking hooded fellow adorned in black and a variety of daggers; a tall, elegant lady with eyes as sharp as diamonds and ears as pointy as your cursor. There is someone in the corner, too. The figure is shrouded by shadow, but the soft glow of a pipe partially illuminates a wizardly staff. 
+"Are you gonna just stand in the doorway and stare?" says the hefty dwarf, interrupting your reading. "Come then, traveler. I challenge you to a drinking contest!" 
+
+[[You don't drink anymore, after that one night.|Sobriety is for Winners]]
+
+[[You succumb to the social pressure, and try to fit in.|Just Kidding, There Is No Such Thing As Choice]]]
+{(set: $visited_merchant to 0)
+(set: $defeated_alcoholism to true)
+(set: $sober to $sober +1)}(if: $sober <2)[|typed-speed0>[SOBER
+
+Proud of your staunch rejection of liquid sin, you make your way up to the bartender to timidly ask for directions out of the text adventure. Before you can approach the bar, however, you are accosted by the mysterious hooded man all swathed in black. 
+"Hey. Hey you. Wanna buy a sword?" His breath reeks of alcohol, and something much worse - something poisonous. He opens his cloak to reveal a large, ornate weapon. Encrusted with glittering jewels, a golden blade gleams from the folds of his clothing. It beckons you.
+
+[[Resist the urge and tell the man that you don't have any money.|The Bartender is Just Another Character]]
+
+[[Ask if you can complete a quest or something to earn the weapon.|Questing is Like, Your Favourite Thing]]]](if: $sober >1)[SOBER
+
+Proud of your staunch rejection of liquid sin, you make your way up to the bartender to timidly ask for directions out of the text adventure. Before you can approach the bar, however, you are accosted by the mysterious hooded man all swathed in black. 
+"Hey. Hey you. Wanna buy a sword?" His breath reeks of alcohol, and something much worse - something poisonous. He opens his cloak to reveal a large, ornate weapon. Encrusted with glittering jewels, a golden blade gleams from the folds of his clothing. It beckons you.
+
+[[Resist the urge and tell the man that you don't have any money.|The Bartender is Just Another Character]]
+
+[[Ask if you can complete a quest or something to earn the weapon.|Questing is Like, Your Favourite Thing]]]
+{(set: $social to $social +1)}<pre style="line-height:1">            --.ohhs-           
+   /oyNhhNNMMMMMMMM.-         
+  /MMMMMMMMMMMMMMMMMMNm/      
+ yMMMMMMMMMMMMMMMMMMMMMNs     
+`mMMMMMMMMMMMMMMMMMMMMMMd     
+-MMMMMMMMMMMMMMMMMMMMMMh--`   
+`hMMMMMMMMMMMMMhmhhy+yssMMMd- 
+  :dMMMMMMMmsyshhhdyhmm/-.hMm 
+   :dMMMMMMhommdmmdhhmN   .MM.
+    :MMMMMoymmmmmmdhhmM    NM:
+    ssmNmohddmmdmmdhhmM.   mM/
+    hmhyhmmmddmmmmdhhmM-   NM+
+    hmmmdmmmmmmddmdhhmM:  +MM:
+    hNmddmmmmdmmmdmddmM+ymMN+ 
+    hNmmmmddmmmmddmmmmMoo+:`  
+    sNNmmmmmmmmmmmmNNNho      
+   /MdhhhhhhhhhhhhhhhhNM/     
+   :NMMMMMMMMMMMMMMMMMNy.     
+     .:+osyyhhhhyso+:.       </pre>(if: $social <2)[|typed-speed0>[SOCIAL LUBRICANT
+
+Losing yourself in the text, you grab the nearest flagon and down it in a few chugs. The rest is only snippets of memory; cold ale dripping down your chin onto your face, the crowd chanting your name, and a brief, spinning vision of the room from atop the weathered tavern table. 
+You have won the drinking contest against all odds! However, you lack the funds to pay the bartender for the multitude of drinks you have consumed. Severely drunk and ashamed, you are thrown back into the muddy street.
+
+[[BELCH.|Enter the Void]]]]
+(if: $social >1)[SOCIAL LUBRICANT
+
+Losing yourself in the text, you grab the nearest flagon and down it in a few chugs. The rest is only snippets of memory; cold ale dripping down your chin onto your face, the crowd chanting your name, and a brief, spinning vision of the room from atop the weathered tavern table. 
+You have won the drinking contest against all odds! However, you lack the funds to pay the bartender for the multitude of drinks you have consumed. Severely drunk and ashamed, you are thrown back into the muddy street.
+
+[[BELCH.|Enter the Void]]]
+{(set: $visited_bartender to it +1)}|typed-speed0>[STEREOTYPICAL BEHAVIOUR
+(if: $visited_merchant is 0)["Good luck then, loser." says the rogue-like creature.
+You make your way up to the bar, and signal for the bartender's attention. He is a stocky bald man, complete with large sideburns and a pair of silver earrings. With a rag in one hand and a flagon in the other, he nods in your general direction.
+"What'll it be then?"
+You mumble your answer, something about not drinking but wanting to exit the text adventure. 
+"What? I have no idea what you're saying, but if you want to leave, the door's right there. And by 'right there' I mean the door to the basement, which is full of rats. You'll probably need a weapon though. I should clarify: if you clear my basement of rats, I'll tell you how to get out of here." He taps his nose and winks. "If not, take a hike, buddy. There's a great trail just past the mill. Beautiful this time of year."]
+(if: $visited_merchant is 1)["Back again? The offer still stands: if you clear my basement of rats, I'll tell you how to get out of here." He taps his nose and winks again. "If not, You could still take a hike."](if: $visited_merchant is 2)[Make up your mind please. I can't keep repeating the same text over and over.]
+(if: $visited_merchant is 3)[Seriously? I already told you. If you ask one more time, I'm kicking you out.](if: $visited_merchant <4)[(if: $vorpal_blade is false and $debt_blade is false)[[[Agree to clear the basement of rats, despite not having a weapon.|A Brash Choice]]]
+
+[[Go back to the shifty merchant.|Questing is Like, Your Favourite Thing]]
+
+[[Take a hike.|Enter the Void]]]
+(if: $visited_merchant is 4)[[[That's it. Get them out of my fictional space, folks!|Enter the Void]]]]
+
+{(set: $main to $main +1)(set: $visited_merchant to it +1)}(if: $main <2)[|typed-speed0>[THE MAIN QUEST
+
+(if: $visited_bartender >= 1)["Ah, yesss. The blade is still available. I have someone coming to look at it tonight, so it's still 15 Shmeckles. I bet you could earn 14 Schmeckles by working for the bartender though." he repeats, almost word-for-word. 
+
+[[Ask the bartender about the job again.|The Bartender is Just Another Character]]]
+(else:)["The blade? I have someone coming to look at it tonight, so it's still 14 Shmeckles. I bet you could earn 14 Schmeckles by working for the bartender though." 
+
+[[Visit the Bartender.|So Much Lost Content]]]
+
+[[Ask if you can borrow the sword to kill the rats, and return with the money.|Out of the Loop]]]]
+(if: $main >1)[THE MAIN QUEST
+
+(if: $visited_bartender >= 1)["Ah, yesss. The blade is still available. I have someone coming to look at it tonight, so it's still 15 Shmeckles. I bet you could earn 14 Schmeckles by working for the bartender though." he repeats, almost word-for-word. 
+
+[[Ask the bartender about the job again.|The Bartender is Just Another Character]]]
+(else:)["The blade? I have someone coming to look at it tonight, so it's still 14 Shmeckles. I bet you could earn 14 Schmeckles by working for the bartender though." 
+
+[[Visit the Bartender.|So Much Lost Content]]]
+
+[[Ask if you can borrow the sword to kill the rats, and return with the money.|Out of the Loop]]]
+
+{(set: $descent to $descent +1)}(if: $descent <2)[|typed-speed0>[THE DESCENT
+
+You follow the bartender (who does not have a name) down into a dark, musty cellar. As promised, a troupe of rats scamper from the torchlight, squeaking and squabbling amongst themselves. The flickering, dancing light also illuminates arched corridors, disappearing in every direction. The walls of cracked stone are mostly lined with large casks of what is presumably wine, mead, or ale. There is no breeze here, only the stillness of a place where things are left in the patient arms of time. The bartender hands you the torch, and makes his way back up the creaky stairs. About halfway up, he pauses to give you a warning:
+"Don't burn the place down."
+
+[[Get to work on eradicating the rats.|Imagine the Stereotypical Outcomes]]
+
+[[Burn the place down.|Unorthodox, Yet Effective]]
+
+(if: $emerald is false)[[[Explore the cellar.|Classic Choice]]]]]
+(if: $descent >1)[THE DESCENT
+
+You follow the bartender (who does not have a name) down into a dark, musty cellar. As promised, a troupe of rats scamper from the torchlight, squeaking and squabbling amongst themselves. The flickering, dancing light also illuminates arched corridors, disappearing in every direction. The walls of cracked stone are mostly lined with large casks of what is presumably wine, mead, or ale. There is no breeze here, only the stillness of a place where things are left in the patient arms of time. The bartender hands you the torch, and makes his way back up the creaky stairs. About halfway up, he pauses to give you a warning:
+"Don't burn the place down."
+
+[[Get to work on eradicating the rats.|Imagine the Stereotypical Outcomes]]
+
+[[Burn the place down.|Unorthodox, Yet Effective]]
+
+(if: $emerald is false)[[[Explore the cellar.|Classic Choice]]]]
+{(set: $loop to $loop +1)(set: $debt_blade to true)}(if: $loop <2)[|typed-speed0>[OUT OF THE LOOP
+
+"Alright. Take the sword. Enjoy." You take the golden blade carefully, as if holding someone else's baby. You are not sure if it likes you or not. In any case, the details are beyond compare. Etched into the hilt are the words 'Blade of Indebtedness'. You are holding it the wrong way, but try to act cool in front of the shady merchant. 
+You stammer a thanks, backing away.
+"I'm not your guy, buddy." he growls, and turns back to his green drink.
+
+[[Clear the basement of rats.|A Brash Choice]]
+
+[[Resist the pull of this fantasy and leave.|Enter the Void]]
+
+(if: $orc_meeting is true)[[[Return to the elf.|Here We Go Again]]]]]
+(if: $loop >1)[OUT OF THE LOOP
+
+"Alright. Take the sword. Enjoy." You take the golden blade carefully, as if holding someone else's baby. You are not sure if it likes you or not. In any case, the details are beyond compare. Etched into the hilt are the words 'Blade of Indebtedness'. You are holding it the wrong way, but try to act cool in front of the shady merchant. 
+You stammer a thanks, backing away.
+"I'm not your guy, buddy." he growls, and turns back to his green drink.
+
+[[Clear the basement of rats.|A Brash Choice]]
+
+[[Resist the pull of this fantasy and leave.|Enter the Void]]
+
+(if: $orc_meeting is true)[[[Return to the elf.|Here We Go Again]]]]
+{(set: $joke to $joke +1)(set: $visited_merchant to it +1)}(if: $joke <2)[|typed-speed0>[THE BAD JOKE
+
+You make your way up to the bar, and signal for the bartender's attention. He is a stocky bald man, complete with large sideburns and a pair of silver earrings. With a rag in one hand and a flagon in the other, he nods in your general direction.
+"What'll it be then?"
+You mumble your answer, something about not drinking but wanting to exit the text adventure. 
+
+"What? I have no idea what you're saying, but if you want to leave, the door's right there. And by 'right there' I mean the door to the basement, which is full of rats. You'll probably need a weapon though.  I should clarify: if you clear my basement of rats, I'll tell you how to get out of here." He taps his nose and winks.
+
+(if: $vorpal_blade is false and $debt_blade is false)[[[Agree to clear the basement of rats, despite not having a weapon.|A Brash Choice]]]
+
+[[Go back to the shifty merchant.|Questing is Like, Your Favourite Thing]]
+
+[[Take a hike.|Enter the Void]]]]
+(if: $joke >1)[THE BAD JOKE
+
+You make your way up to the bar, and signal for the bartender's attention. He is a stocky bald man, complete with large sideburns and a pair of silver earrings. With a rag in one hand and a flagon in the other, he nods in your general direction.
+"What'll it be then?"
+You mumble your answer, something about not drinking but wanting to exit the text adventure. 
+
+"What? I have no idea what you're saying, but if you want to leave, the door's right there. And by 'right there' I mean the door to the basement, which is full of rats. You'll probably need a weapon though.  I should clarify: if you clear my basement of rats, I'll tell you how to get out of here." He taps his nose and winks.
+
+(if: $vorpal_blade is false and $debt_blade is false)[[[Agree to clear the basement of rats, despite not having a weapon.|A Brash Choice]]]
+
+[[Go back to the shifty merchant.|Questing is Like, Your Favourite Thing]]
+
+[[Take a hike.|Enter the Void]]]
+(set: $pork to $pork +1)
+(if: $pork <2)[|typed-speed0>[¿PORQUE NO LOS DOS?
+
+Summoning much more bravery than is required to read, you traipse around in the dank cellar. Strangely, it smells of weeds. By the four-hundred-and-twentieth pace, you come to a fork in the road. It glistens with fresh blood, each prong bent in its own horrifying way. To your right is a small alcove, clearly once a place of relief. It seems unused however, and it does not have the typical stench of questionable writing you have become so acquainted with on your journey. In front of you, the path continues. It seems familiar, as if you have traveled it before. Perhaps you have.   
+
+[[Follow the mysterious passage as far as it goes.|Enter the Void]]
+
+[[Open the latrine lid.|Pick Your Poison]]]]
+(if: $pork >1)[¿PORQUE NO LOS DOS?
+
+Summoning much more bravery than is required to read, you traipse around in the dank cellar. Strangely, it smells of weeds. By the four-hundred-and-twentieth pace, you come to a fork in the road. It glistens with fresh blood, each prong bent in its own horrifying way. To your right is a small alcove, clearly once a place of relief. It seems unused however, and it does not have the typical stench of questionable writing you have become so acquainted with on your journey. In front of you, the path continues. It seems familiar, as if you have traveled it before. Perhaps you have.   
+
+[[Follow the mysterious passage as far as it goes.|Enter the Void]]
+
+[[Open the latrine lid.|Pick Your Poison]]]
+(if: $death is true and $debt_blade is true)[[[You spy a plothole in the story. You decide to throw your cursed blade into it.|PLOTHOLE]]]
+{(set: $wicked to $wicked +1)}(if: $wicked <2)[|typed-speed0>[SOMETHING WICKED THIS WAY COMES 
+
+Left alone, the only sound is the distant raucous laughter from the busy floor above. You make a mental note to complain to your landlord before realizing you are still trapped in a text adventure. 
+Well, it <i>was</i> silent. A rushing, coursing kind of rustling is going on all about you - something, many things, are moving towards you in the darkness. The sound is thousands of rat claws on ancient stone, of a multitude of little furry bodies scurrying in earnest. They stop at the edge of the torchlight's boundary, arranging themselves in row upon row, rats extending into the darkness as far as you can see. There is a brief silence before the small creatures shift once more, clearing a path before you. Then, from the darkness: two (colour: red)[red] eyes emerge, the eyes of a great evil rat. It is the size of a large housecat, with matted fur, a furled lip, and several scars. It is judging you.
+After a tense few moments, the giant rat lumbers off into the darkness, apparently satisfied with this threatening display. With it, the rat horde scatters back into the inky blackness.
+
+[[Attempt to catch and kill one of the rats with your bare hands.|Natural 1]]
+
+[[Sneak upstairs, steal some cheese, and return to the basement to feeds the vermin you are supposed to eradicate.|Perk Unlocked]]
+
+(if: $debt_blade is true)[[[Attack the rats with your sword.|Natural 1]]]]]
+(if: $wicked >1)[SOMETHING WICKED THIS WAY COMES 
+
+Left alone, the only sound is the distant raucous laughter from the busy floor above. You make a mental note to complain to your landlord before realizing you are still trapped in a text adventure. 
+Well, it <i>was</i> silent. A rushing, coursing kind of rustling is going on all about you - something, many things, are moving towards you in the darkness. The sound is thousands of rat claws on ancient stone, of a multitude of little furry bodies scurrying in earnest. They stop at the edge of the torchlight's boundary, arranging themselves in row upon row, rats extending into the darkness as far as you can see. There is a brief silence before the small creatures shift once more, clearing a path before you. Then, from the darkness: two (colour: red)[red] eyes emerge, the eyes of a great evil rat. It is the size of a large housecat, with matted fur, a furled lip, and several scars. It is judging you.
+After a tense few moments, the giant rat lumbers off into the darkness, apparently satisfied with this threatening display. With it, the rat horde scatters back into the inky blackness.
+
+[[Attempt to catch and kill one of the rats with your bare hands.|Natural 1]]
+
+[[Sneak upstairs, steal some cheese, and return to the basement to feeds the vermin you are supposed to eradicate.|Perk Unlocked]]
+
+(if: $debt_blade is true)[[[Attack the rats with your sword.|Natural 1]]]]
+{(set: $natural to $natural +1)(set: $death to true)}<pre style="line-height:1">
+    /o.                  .o/   
+ +sNd-     ``.---.``    -dNs+ 
+ +o-/+- `:sdNMMMMMMmy/`.+/-o+ 
+      :-dMMMMMMMMMMMMMm/      
+       mMMMNNMMMMMNNMMMM.     
+       NMM+..:NMMo--/NMM.     
+       -dM/``-mMM:``.mm+      
+        :/yhmNm/dNmdyo.       
+      :+-  /MMyosMMy -+:      
+ +o-/+-    .o+/s/+o:   -+/-o+ 
+ +sNd-                  -dNs+ 
+   /o.                  .o/   </pre>(if: $natural <2)[|typed-speed0>[NATURAL 1
+(if: $emerald is true)[You feel the emerald growing hot in the palm of your hand.]
+(if: $debt_blade is false)[Rushing to a particularly small corner, you throw aside an empty cask to reveal a stray rat. It is trapped! Managing to grab the wriggling thing by the tale, you move to do what needs to be done. You barely close your hands upon it before they start.] Making their way up your pant legs, hundreds of rats swarm your body, tearing your clothes to shreds and forcing you to drop your torch(if:$debt_blade is true)[ and sword] on the damp floor. In their newfound darkness, they seem to grow stronger, gnawing at your skin, sinew and bones as you claw at the last few moments of this terrible life you have left. The gods have rolled your dice poorly.
+Upstairs, the townsfolk continue to enjoy their nightly celebrations, telling the same jokes <i>ad infinitum</i>, slapping each other on the back, and raising a pint to eternal friendship. None of them can hear you scream. 
+Sleep easy, for you have found one way out of the text adventure.]
+
+[[One must imagine Sisyphus happy.|Setting the Table]]]
+(if: $natural >1)[NATURAL 1
+(if: $emerald is true)[You feel the emerald growing hot in the palm of your hand.]
+(if: $debt_blade is false)[Rushing to a particularly small corner, you throw aside an empty cask to reveal a stray rat. It is trapped! Managing to grab the wriggling thing by the tale, you move to do what needs to be done. You barely close your hands upon it before they start.] Making their way up your pant legs, hundreds of rats swarm your body, tearing your clothes to shreds and forcing you to drop your torch on the damp floor. In their newfound darkness, they seem to grow stronger, gnawing at your skin, sinew and bones as you claw at the last few moments of this terrible life you have left. The gods have rolled your dice poorly.
+Upstairs, the townsfolk continue to enjoy their nightly celebrations, telling the same jokes <i>ad infinitum</i>, slapping each other on the back, and raising a pint to eternal friendship. None of them can hear you scream. 
+Sleep easy, for you have found one way out of the text adventure.
+
+[[One must imagine Sisyphus happy.|Setting the Table]]]
+{(set: $areturn to $areturn +1)}(if: $areturn <2)[|typed-speed0>[(if: $vorpal_blade is true)[A RETURN
+
+"Hurrah!" Cheers erupt as you return to the main floor of the tavern with a bloody sword and a crooked smile. You felt bad for killing the rats, but now it seems worth it. You graciously accept the coins from the bartender for completing his quest, and inquire about the escape route he had promised to tell you about.
+"Oh, there is no way out. We've all tried. I just wanted someone to clear out the basement. Want a drink?"
+You shake your head, turning for the door.]
+(else:)[You return to the bartender and explain your inability to eradicate the rats. 
+"Of course," he says, "I was waiting for you come back. What were you thinking?" He says this all overly loudly, and generates a volley of laughter from his patrons. You, as you have always suspected, are once again the butt of jokes that go over your head.
+"So. You haven't completed my quest, so I can't help you out of here. Why not stay? C'mon, have a drink."]
+"I can help you." comes a voice out of nowhere, cool and smooth as a fine whiskey. It is the tall lady, who was one of the only people in the room not mock your stupidity behind your back. 
+
+[[Leave.|Enter the Void]] 
+
+[[Talk to the lady.|Here We Go Again]]]]
+(if: $areturn >1)[(if: $vorpal_blade is true)[A RETURN
+
+"Hurrah!" Cheers erupt as you return to the main floor of the tavern with a bloody sword and a crooked smile. You felt bad for killing the rats, but now it seems worth it. You graciously accept the coins from the bartender for completing his quest, and inquire about the escape route he had promised to tell you about.
+"Oh, there is no way out. We've all tried. I just wanted someone to clear out the basement. Want a drink?"
+You shake your head, turning for the door.]
+(else:)[You return to the bartender and explain your inability to eradicate the rats. 
+"Of course," he says, "I was waiting for you come back. What were you thinking?" He says this all overly loudly, and generates a volley of laughter from his patrons. You, as you have always suspected, are once again the butt of jokes that go over your head.
+"So. You haven't completed my quest, so I can't help you out of here. Why not stay? C'mon, have a drink."]
+"I can help you." comes a voice out of nowhere, cool and smooth as a fine whiskey. It is the tall lady, who was one of the only people in the room not mock your stupidity behind your back. 
+
+[[Leave.|Enter the Void]] 
+
+[[Talk to the lady.|Here We Go Again]]]
+{(set: $orc_meeting to true)(set: $orc to $orc +1)(set: $orc_meeting to true)}(if: $orc <2)[|typed-speed0>[THE ORC
+
+You decide to speak to the lady. As described earlier, she is basically your classic elf: tall, raven haired, and strong yet soft spoken. She is wearing some sort of armored bikini.  Reading this sentence, you find that her name is Beor O'Shift. 
+"You want out? Don't listen to him." she says, hands on her hips. 
+"I have it on good authority that the Old Man of Wandering Mountain" - she motions to the corner - "knows how to get out of here. You see, he has magical powers."
+"He won't speak to anyone unless they have the emerald, and there's only one way I know of to get the emerald." She waits for you to ask how.
+"It's simple. You have to kill the orc that comes through town every night." 
+Before you have a chance to make a decision, the elf drags you outside by the arm. In the distance, you see a tall figure approaching. The elf pulls you into a bush with her, and you wait in silence until the creature gets closer. The orc is large, muscular, and appears to be very strong.
+"Now. A coward dies a thousand deaths." whispers the elf, and pushes you out of the bush.
+(if: $vorpal_blade is true or $debt_blade is true)[[[Attack!|There's Fictional Blood on Your Hands]]]
+
+[[Apologize profusely to the orc.|Logical Inconsistencies]]
+
+(if: $vorpal_blade is false or $debt_blade is false)[[[Beg the merchant for the blade.|Out of the Loop]]]]
+
+(if: $rat_chaos is true)[[[Unleash Rat Chaos.|This Too is a Reference]]]]
+(if: $orc >1)[THE ORC
+
+You decide to speak to the lady. As described earlier, she is basically your classic elf: tall, raven haired, and strong yet soft spoken. She is wearing some sort of armored bikini.  Reading this sentence, you find that her name is Beor O'Shift.
+"You want out? Don't listen to him." she says, hands on her hips. 
+"I have it on good authority that the Old Man of Wandering Mountain" - she motions to the corner - "knows how to get out of here. You see, he has magical powers."
+"He won't speak to anyone unless they have the emerald, and there's only one way I know of to get the emerald." She waits for you to ask how.
+"It's simple. You have to kill the orc that comes through town every night." 
+Before you have a chance to make a decision, the elf drags you outside by the arm. In the distance, you see a tall figure approaching. The elf pulls you into a bush with her, and you wait in silence until the creature gets closer. The orc is large, muscular, and appears to be very strong.
+"Now. A coward dies a thousand deaths." whispers the elf, and pushes you out of the bush.
+(if: $vorpal_blade is true or $debt_blade is true)[[[Attack!|There's Fictional Blood on Your Hands]]]
+
+[[Apologize profusely to the orc.|Logical Inconsistencies]]
+(if: $vorpal_blade is false or $debt_blade is false)[[[Beg the merchant for the blade.|Out of the Loop]]]
+
+(if: $rat_chaos is true)[[[Unleash Rat Chaos.|This Too is a Reference]]]]
+
+
+
+
+{(set: $eitheror to $eitheror +1)}<pre style="line-height:1">
+               `.  
+             `--`   
+           `::`     
+         `/:`       
+       .//.         
+  `+`.++.           
+   -os+             *
+ `-:``/.            
+.+.     </pre>(if: $eitheror <2)[|typed-speed0>[EITHER/OR
+
+Inside the shallow latrine pit lies two items. One is a rusty two-handed sword, obviously unused for quite some time. On the hilt, the words (text-style: "blur")["Bane of Jabberwocky"] can be read with some effort.
+The second item is much shinier, as if it had been placed there in that underground latrine pit only that afternoon. It is a large emerald, glittering to itself in the darkness. You realize that you have no pockets to put either in, so you must choose between the two.
+
+[[Take the emerald.|Victory Lap]]
+[[Take the Vorpal blade.|Ratatouille]]]]
+(if: $eitheror >1)[EITHER/OR
+
+Inside the shallow latrine pit lies two items. One is a rusty two-handed sword, obviously unused for quite some time. On the hilt, the words (text-style: "blur")[Bane of Jabberwocky] can be read with some effort.
+The second item is much shinier, as if it had been placed there in that underground latrine pit only that afternoon. It is a large emerald, glittering to itself in the darkness. You realize that you have no pockets to put either in, so you must choose between the two.
+
+[[Take the emerald.|Victory Lap]]
+[[Take the Vorpal blade.|Ratatouille]]]
+(mouseover: "-os+")[Oh my god you found me. I'm the author, and I've been trapped in here since I started writing. oh god help me, it's so lonely]
+{(set: $wizard to $wizard +1)(set: $emerald to true)}<pre style="line-height:1">    
+            o        
+          .m:       
+          ydy       
+         .dNm`      
+         yddd-      
+         :yss-      
+         +.s/s`     
+-      -+/   :h/    
+.+   :yddm.  odhdo:`
+ /oohdhdhdN/ymhmdms+
+ :/dhh+mhhhddhhysy  
+   +s` mhhhhhhhd    
+      `mhhhhhhhm.   
+      `mhhhhhhhd/   
+      .hyyssoo++:                          
+</pre>(if: $wizard <2)[|typed-speed0>[ENTER AN OLD MAN, SLIGHTLY SENILE
+
+You return to the main floor of the tavern, unsure of what is right and wrong anymore. As you make your way through the crowd, someone calls your name softly. It is a very quiet voice amongst the babble, but you heard it nonetheless. You turn to your left to see a hand emerging from the dark corner, beckoning you. It is an old man, a wise, withered, wizened wizard. From the tall conical hat to the bejeweled staff, the man is a living stereotype. He even has a pipe.
+"You have the Terribly Cursed Emerald that I seek. May I have it?"
+
+[[Give the emerald to the old man.|The Good Ending]]
+
+(if: $vorpal_blade is false and $debt_blade is false)[[[Ask the bartender if he still wants the basement cleared of rats, despite not having a weapon.|A Brash Choice]]]]](if: $wizard >1)[ENTER AN OLD MAN, SLIGHTLY SENILE
+
+You return to the main floor of the tavern, unsure of what is right and wrong anymore. As you make your way through the crowd, someone calls your name softly. It is a very quiet voice amongst the babble, but you heard it nonetheless. You turn to your left to see a hand emerging from the dark corner, beckoning you. It is an old man, a wise, withered, wizened wizard. From the tall conical hat to the bejeweled staff, the man is a living stereotype. He even has a pipe.
+"You have the Terribly Cursed Emerald that I seek. May I have it?"
+
+[[Give the emerald to the old man.|The Good Ending]]
+
+(if: $vorpal_blade is false and $debt_blade is false)[[[Ask the bartender if he still wants the basement cleared of rats, despite not having a weapon.|A Brash Choice]]]]
+{(set: $character to $character +1)(set: $vorpal_blade to true)}
+(if: $character <2)[|typed-speed0>[A TEST OF CHARACTER
+
+You wander back to the main room of the basement. There are still rats here and there, as evidenced by the occasional squeak and rustle. You take a moment to consider some philosophical questions. Do your choices ultimately matter? Or are you trapped by the limitations of your environment? Are you merely destined to choose what has been predetermined for you? As there are no answers to these questions, you must do something. Unless, of course, you have been determined to do nothing (you haven't).
+
+[[Return to the bartender without completing your quest.|A Return]]
+
+[[You feel compassion for the harmless animals, and decide to spare their lives. They could use some cheese, too.|Perk Unlocked]]
+
+[[Eradicate the rats.|Old Fashioned Gore]]]]
+(if: $character >1)[A TEST OF CHARACTER
+
+You wander back to the main room of the basement. There are still rats here and there, as evidenced by the occasional squeak and rustle. You take a moment to consider some philosophical questions. Do your choices ultimately matter? Or are you trapped by the limitations of your environment? Are you merely destined to choose what has been predetermined for you? As there are no answers to these questions, you must do something. Unless, of course, you have been determined to do nothing (you haven't).
+
+[[Return to the bartender without completing your quest.|A Return]]
+
+[[You feel compassion for the harmless animals, and decide to spare their lives. They could use some cheese, too.|Perk Unlocked]]
+
+[[Eradicate the rats.|Old Fashioned Gore]]]
+
+(set: $gore to $gore +1)(if: $gore <2)[|typed-speed0>[OLD FASHIONED GORE
+
+(if: $vorpal_blade is true and $debt_blade is false)[This is your moment to shine. With a triumphant roar, you aim the Vorpal blade at the nearest rat. You are startled to find that the weapon has a mind of its own - slicing through the rat as if with practiced ease. Pulling you from nook to nook, the sword actively seeks out more prey. Accompanying the death-squeaks of the rats is another sound, something that can only be described as "snicker-snack". How curious. There is a part of you that marvels at the efficiency of this weapon, another that sits in the pit of your stomach: the sickly guilt of ending so many little lives. You push it aside. It isn't long until you have slaughtered most of the rats. The silence is unsettling.
+
+[[Return to the bartender.|A Return]]]
+
+(if: $debt_blade is true and $vorpal_blade is false)[The rats seem angered by your presence.
+
+[[Take a swing at the rats.|Natural 1]]]
+
+(if: $vorpal_blade is true and $debt_blade is true)[The two swords seem to be at odds with each other. As you take your first swing with the Vorpal blade, it is met mid-air with the merchant's blade. The two swords locked in equal power, you are left powerless.
+
+[[Drop your weapons.|Natural 1]]]]]
+(if: $gore >1)[OLD FASHIONED GORE
+
+(if: $vorpal_blade is true and $debt_blade is false)[This is your moment to shine. With a triumphant roar, you aim the Vorpal blade at the nearest rat. You are startled to find that the weapon has a mind of its own - slicing through the rat as if with practiced ease. Pulling you from nook to nook, the sword actively seeks out more prey. Accompanying the death-squeaks of the rats is another sound, something that can only be described as "snicker-snack". How curious. There is a part of you that marvels at the efficiency of this weapon, another that sits in the pit of your stomach: the sickly guilt of ending so many little lives. You push it aside. It isn't long until you have slaughtered most of the rats. The silence is unsettling.
+
+[[Return to the bartender.|A Return]]]
+
+(if: $debt_blade is true and $vorpal_blade is false)[The rats seem angered by your presence.
+
+[[Take a swing at the rats.|Natural 1]]]
+
+(if: $vorpal_blade is true and $debt_blade is true)[The two swords seem to be at odds with each other. As you take your first swing with the Vorpal blade, it is met mid-air with the merchant's blade. The two swords locked in equal power, you are left powerless.
+
+[[Drop your weapons.|Natural 1]]]]
+
+
+(set: $goodend to $goodend +1)(if: $goodend <2)[|typed-speed0>[THE GOOD ENDING
+
+"Thank you, dear reader. Do you want to know how to get yourself out of this adventure? I think I can remember now, thanks to the power of this magnificent jewel. There's just one little thing you need to do for me, just one last quest. Can you do that for me?"
+
+[[Click to start the wizard's quest.|Setting the Table]]
+
+[[Look for other work.|Work Sighted]]]]
+(if: $goodend >1)[THE GOOD ENDING
+
+"Thank you, dear reader. Do you want to know how to get yourself out of this adventure? I think I can remember now, thanks to the power of this magnificent jewel. There's just one little thing you need to do for me, just one last quest. Can you do that for me?"
+
+[[Click to start the wizard's quest.|Setting the Table]]
+
+[[Look for other work.|Work Sighted]]]
+             <pre style="line-height:1">                      
+          `:+syyyys+:`         
+      `+dMMMMMMMMMMMMd+`      
+     +NMMMMMMMMMMMMMMMN+     
+    `hMMMMMMMMMMMMMMMMMMMh`   
+    hMMMMMMMMMMMMMMMMMMMMh   
+  -MMMMMMMMMMMMMMMMMMMMMMM-  
+  /MMMMMMMMMTHEENDMMMMMMMM/  
+   -MMMMMMMMMMMMMMMMMMMMMM-  
+    hMMMMMMMMMMMMMMMMMMMMh   
+    `hMMMMMMMMMMMMMMMMMMh`   
+     +NMMMMMMMMMMMMMMMN+     
+      `+dMMMMMMMMMMMMd+`      
+         `:+syyyys+:`         
+                              </pre>
+{(set: $violent to $violent +1)}
+(if: $violent <2)[|typed-speed0>[VIOLENT WORDS
+
+(if: $vorpal_blade is true and $debt_blade is false)[As you rush the orc, your Vorpal blade springs to action on its own, carving the orc into several pieces before it even realizes you are there. From around the bend, three more figures approach. More orcs. This time, however, the orcs seem different. One is a female, and the other two are younglings. You have killed their father, an innocent journeyman.
+<br>
+[[You are victorious!|Victory Lap]]]
+(if: $debt_blade is true and $vorpal_blade is false)[As you rush the orc, you attempt to pull out the merchant's blade from its beautiful scabbard. It is stuck. Seeing someone trying to draw a weapon, the orc decides to strike first.
+
+[[You die.|The Bad Ending]]]
+(if: $vorpal_blade is true and $debt_blade is true)[The debt blade stabs you as you stab the orc.
+
+[[You die.|The Bad Ending]]]]]
+(if: $violent >1)[VIOLENT WORDS
+
+(if: $vorpal_blade is true and $debt_blade is false)[As you rush the orc, your Vorpal blade springs to action on its own, carving the orc into several pieces before it even realizes you are there. From around the bend, three more figures approach. More orcs. This time, however, the orcs seem different. One is a female, and the other two are younglings. You have killed their father, an innocent journeyman.
+<br>
+[[You are victorious!|Victory Lap]]]
+(if: $debt_blade is true and $vorpal_blade is false)[As you rush the orc, you attempt to pull out the merchant's blade from its beautiful scabbard. It is stuck. Seeing someone trying to draw a weapon, the orc decides to strike first.
+
+[[You die.|The Bad Ending]]]
+(if: $vorpal_blade is true and $debt_blade is true)[The debt blade stabs you as you stab the orc.
+
+[[You die.|The Bad Ending]]]]
+|typed-speed0>[WORK SIGHTED
+Up on the wall behind the old man you spot a board covered in strange words. Most of them you have never heard before, but there are a few that you remember fondly.]
+REFERENCES
+8BitFanboy. “Birdy - Skinny Love (8-Bit Remix).” Online video clip. Youtube. 27 Aug. 2012. <https://www.youtube.com/watch?v=dZfwrUJ5jdY>. 7 Nov. 2016.
+Allen, Woody. “The Kugelmass Episode”. The New Yorker. 2 May 1977. 34-39. Print.
+Bell, Alice and Jan Alber. "Ontological Metalepsis and Unnatural Narratology.” Journal of Narrative Theory, 42(2), 2012. 166-192. Web.
+Bradbury, Ray. Something Wicked This Way Comes. New York: Avon Books, 1997. Print.
+Camus, Albert. The Myth of Sisyphus, and Other Essays. New York: Knopf, 1955. Print.
+“Canada on Strike.” South Park. Comedy Central. 2 Apr. 2008. Television.
+Carroll, Lewis. "Jabberwocky." Poetry.net. STANDS4 LLC, 2016. Web. <http://www.poetry.net/poem/25769>. 7 Nov. 2016. 
+“Chapter 1: § 107.” U.S. Copyright Office. Web. <http://www.copyright.gov/title17/92chap1.html#107>. 7 Nov. 2016. 
+
+[[You hate scrolling, so you load another page.|PAGE 2]]
+
+[[Go back to the wizard.|The Good Ending]]
+(set: $subversion to $subversion +1)(if: $subversion <2)[|typed-speed0>[SUBVERSION OF STEREOTYPES
+
+"Hello sir. If I'm not mistaken, you have been recruited by that racist woman to assault me. I am certainly glad you have decided not to do so, and in my gratitude I offer you this emerald. The elf has no interest in it, only in doing me and my kind harm. Good day."
+
+You are tired of this story, tired of this eternal circle.
+
+[[Return to the tavern with the gem.|Victory Lap]]]](if: $subversion >1)[SUBVERSION OF STEREOTYPES
+
+The orc is not surprised to see you. 
+
+"Hello sir. If I'm not mistaken, you have been recruited by that racist woman to assault me. I am certainly glad you have decided not to do so, and in my gratitude I offer you this emerald. The elf has no interest in it, only in doing me and my kind harm. Good day."
+
+You are tired of this story, tired of this eternal circle.
+
+[[Return to the tavern with the gem.|Victory Lap]]]<pre style="line-height:1">   
+        .:/+oossssoo+/-`       
+    `-syyyyyyyyyyyyyyyyo.`    
+ `-sh+syyyyyyyyyyyyyyyys/o/.` 
+-hmdoyysooosssssssooossyodmdy-
+smmoyssshdmsyyyyysomyosyysmmms
+.h+sshdmmmmmsyyysommmmhos+mmy.
+ `-sdmmmmmmmmoysommmmmmmy:+-  
+   `:+syyhdddh+/ddddhhhy:     
+      .+oshmmmosyyyohh/`      
+        `:+ymmhsyssy:`        
+           ./yd+o/-           
+              -.`                                   </pre>
+<script>startTypedModule();</script>
+(set: $death to true)(if: $vorpal_blade is true)[You thought dual-wielding would be cool, but as it turns out the weapon you 'bought' from the merchant has turned against you.]
+
+You have died, but at least you won't have to play text adventures anymore.]
+
+MESSAGE TO THE AUTHOR
+
+(mouseover: "MESSAGE TO THE AUTHOR")[MYSTERIOUS, UNEMBODIED VOICE: "Pshh. Technically all fictional characters are unembodied. You know, it's a strange thing, this 'multi-linear narrative' stuff. It kind of shows that compatibilism the most realistic model, doesn't it? Like CUPCAKES.
+
+Anyways, we know that the Fantasy RPG genre is full of tropes, so reversing/playing with them isn't all that clever. It's been done before. Also done before is this 'meta-commentary' nonsense. You do know that postmodernism is getting old, right? Everyone does it and thinks they're so smart, like they're the first to think of it. It's not funny anymore. Yeah, I get it: I'm a character that is written by the author yet is tired of his writing. Big deal. Once naturalized, unnatural narrators and metalepsis become trite, boring, and ultimately cringeworthy. So what do you want me to say, huh? How about I tell a story about ruining the word count. I must say there is nothing in this world I abominate worse, than to be interrupted in a story ]
+
+[[One must imagine Sisyphus happy.|Setting the Table]]
+“The Quest Begins.” HarmonQuest. Starburns Industries. 14 Jul. 2016. Web. 
+Shakespeare, William, Burton Raffel, and Harold Bloom. Julius Caesar. New Haven: Yale University Press, 2006. Print.
+squashy555. “Computer Startup.wav.” Freesound.org. Web. <https://www.freesound.org/people/squashy555/sounds/273736/>. 7 Nov. 2016. 
+Sterne, Laurence, Melvyn New, and Joan New. The Life and Opinions of Tristram Shandy, Gentleman. London: Penguin Books, 2003. Print.
+Stoker, Bram. “The Judge’s House.” Dracula’s Guest and Other Weird Stories. London: Routledge, 1914. 19-44. Print.
+Undertale. Toby Fox. 2015. Video Game.
+“VT323.” Google Fonts. Web. 7 Nov. 2016. <https://fonts.google.com/specimen/VT323>.
+Wake, Paul. "Life And Death In The Second Person: Identification, Empathy, And Antipathy In The Adventure Gamebook." Narrative 24.2 (2016): 190-210. Academic Search Complete. Web. 7 Nov. 2016.
+
+[[Go back to the wizard.|The Good Ending]]
+
+[[You feel like reading more about the story itself. How meta!|The Making Of]]
+Creating MetaQuest was truly a learning experience. To begin, I had to know what I wanted to write about. The parameters were fairly wide: the story needed to be relevant in both topic and genre to our class. As a result, the topic I chose was ‘unnatural narration’, a theme that is made evident in my reversal of the classic fantasy text adventure genre. Also heavily relied upon is vertical metalepsis, as both the reader and author are placed directly into the text. As I wanted to lay bare the constructedness of the work, many references are made to the work itself, tropes within the fantasy genre, and the reader’s lack of agency. For example, every passage begins with a title, breaking immersion and signifying the fictional nature of the piece. 
+	The layout of the story structure was fairly easy to figure out using Twine’s handy layout visualizations. As per the genre, I wanted to have one main ‘successful’ path in which the reader would be forced into playing the story once again. I say ‘playing’ as I have also included a number of alternate ‘failure’ paths which the reader may stumble upon. One of the choices regarding structure that had to be made was one of navigation. To reinforce the idea that readers were ‘trapped’ in the story, I decided to remove the navigational buttons that Twine includes by default with CSS. 
+	
+[[Go back to the wizard.|The Good Ending]]
+
+[[Keep Reading.|Blah Blah Blah]] 
+	
+While readers may not realize it at first, MetaQuest relies heavily on the use of Harlowe’s pseudo-Javascript variables. This is the main reason the story was created with Twine rather than Scalar. I do not hesitate to state that the most difficult process in the creation of this project was understanding the logic in play. Keeping track of the three main items ($emerald, $vorpal_sword, and $debt_blade) was relatively simple as they were only ever TRUE or FALSE (the main exception being events that relied upon multiple items). However, other variables such as conversation trackers were much harder to comprehend. For example, visiting the bartender enough times will trigger a change in his dialogue, etc. Everything becomes further complicated as the story allows readers to return to earlier passages with their newfound items - as well as the fact that the story itself operates in a loop. 
+	As per the genre, I tried to replicate the aesthetics of something akin to MS-DOS. It’s fair to say that this small feat would not be possible in Scalar. The font VT323 was obtained from Google Fonts and the Javascript module that replicated the typing of text (typed.js) was obtained for free on Github. Images labeled ‘for reuse with modification’ on Google were run through an image-to-ASCII converter on Text-image.com. As for the audio, a free audio clip of a computer starting up was obtained from Freesound.org and the music was taken from Youtube under the fair use exemption § 107.
+	
+[[Go back to the wizard.|The Good Ending]]
+“Convert into ASCII.” Text-image.com. Web. <http://www.text-image.com/convert/ascii.html>. 7 Nov. 2016. 
+Dr. Langeskov, the Tiger, and the Terribly Cursed Emerald: A Whirlwind Heist. Crows Crows Crows. 2015. Video Game.
+Ende, Michael, Ralph Manheim, and Roswitha Quadflieg. The Neverending Story. New York: Dutton Children's Books, 1997. Print.
+Ensslin, Astrid & Alice Bell. “Click = Kill: Textual You in Ludic Digital Fiction.” Storyworlds: A Journal of Narrative Studies. 2012. 49-73. Web.
+“Enter the Void.” The Legend of Korra. Nickelodeon. 22 Aug. 2014. Television. 
+“Hard and Soft Tacos.” Old El Paso. Sept. 2009. Television.
+Klimek, Sonja. “Metalepsis in Fantasy Fiction.” Metalepsis in Popular Culture. Berlin : De Gruyter. 2011. 22-40. eBook.
+“Mattboldt/typed.js.” GitHub. N.p., n.d. Web. 7 Nov. 2016. <https://github.com/mattboldt/typed.js/>.
+“Meeseeks and Destroy.” Rick and Morty. Adult Swim. 20 Jan. 2014. Web.
+Pratchett, Terry. The Color of Magic: A Discworld Novel. New York: HarperCollins, 2000. Print.
+Richardson, Brian. "A Theory of Unnatural Narratives: Definitions, Paradigms, Problems." Unnatural Narrative: Theory, History, and Practice. Columbus, OH: Ohio State University Press. 2015. Print. 3-27.
+
+[[More references?!?|PAGE 3]]
+
+[[Go back to the wizard.|The Good Ending]]
+(set: $debt_blade to false)
+|typed-speed0>[THE PLOTHOLE
+
+The inky black hole shows no sign of accepting your weapon. There are no walls to it, as far as you can see. It is a vast oversight, an emptiness that extends beyond what can be comprehended. Nothing happens, which is not unexpected. 
+At last, you are free from the accursed blade.
+
+[[Return to the fork in the path.|Classic Choice]]]
+(if: $typo <2)[|typed-speed0>[THE TYPO
+
+You have stumbled across a typo. As you approach the building that is supposed to be a stable, you notice that it is in fact a small table. The horses are nowhere to be seen.
+
+[[Approach the tavern.|An Entrance]]
+
+[[Sit on the table.|Riding Humor to Avoid Real Story]]]]
+
+(if: $typo >1)[THE TYPO
+
+You have stumbled across a typo. As you approach the building that is supposed to be a stable, you notice that it is in fact a small table. The horses are nowhere to be seen.
+
+[[Approach the tavern.|An Entrance]]
+
+[[Sit on the table.|Riding Humor to Avoid Real Story]]]
+
+(if: $absurdity <2)[|typed-speed0>[ABSURDITY IS NOT HUMOUR	
+
+The table rears up on its hairy, spindly hind legs and whisks you back to the beginning of the story.
+
+[[Hang on tightly.|Setting the Table]]
+
+[[Throw yourself from the table.|Enter the Void]]]]
+
+(if: $absurdity >1)[ABSURDITY IS NOT HUMOUR	
+
+The table rears up on its hairy, spindly hind legs and whisks you back to the beginning of the story.
+
+[[Hang on tightly.|Setting the Table]]
+
+[[Throw yourself from the table.|Enter the Void]]]
+	
+(mouseover: "beginning")[This was unlike the story
+It was written to be
+I was riding its back
+When it used to ride me]
+(set: $death to true)(if: $flames<2)[|typed-speed0>[TO END IN FLAMES
+	
+Without pausing to consider your actions, you do a sweep of the room for a cask of the most volatile alcohol. Just as you decide 'Volatile Alcohol' would make a great name for a band, you spot one casket leaking something green. It is labelled 'Wildfire'. You break the tap off with a quick kick, and put the torch to the viscous liquid oozing out of the casket. It lights with a 'whoomp', and, as if god had simply flipped a switch, your life is over.
+Although you are not alive to witness it, the tavern explodes into a great firework of green flame, splinters, glass, stone, and body parts.
+Through death, you have escaped the text adventure. If you are disheartened, consider the fact that you have cleared the basement of rats, just as the bartender had asked.	
+
+[[One must imagine Sisyphus happy.|Setting the Table]]]]
+
+(if: $flames>1)[TO END IN FLAMES
+	
+Without pausing to consider your actions, you do a sweep of the room for a cask of the most volatile alcohol. Just as you decide 'Volatile Alcohol' would make a great name for a band, you spot one casket leaking something green. It is labelled 'Wildfire'. You break the tap off with a quick kick, and put the torch to the viscous liquid oozing out of the casket. It lights with a 'whoomp', and, as if god had simply flipped a switch, your life is over.
+Although you are not alive to witness it, the tavern explodes into a great firework of green flame, splinters, glass, stone, and body parts.
+Through death, you have escaped the text adventure. If you are disheartened, consider the fact that you have cleared the basement of rats, just as the bartender had asked.	
+
+[[One must imagine Sisyphus happy.|Setting the Table]]]
+(set: $rat_chaos to true)
+(if: $perk<2)[|typed-speed0>[PERK UNLOCKED
+
+Sneaking back up the stairs, you find yourself behind the bartender. He has his back turned, and so you grab the largest piece of cheese from the cabinet and slowly back towards the stairs. While the bartender does not catch you, a drunken man spots your criminal act and gives you a thumbs up. You manage to make it back down to the rat's cellar without incident, and place the wheel of cheese in the center of the room as an offering.
+
+There is no acknowledgment of your kindness.
+
+[[Return to the bartender to tell him you give up.|A Return]]
+
+[[Attempt to catch one of the rats with your bare hands.|Natural 1]]]]
+(if: $perk>1)[PERK UNLOCKED
+
+Sneaking back up the stairs, you find yourself behind the bartender. He has his back turned, and so you grab the largest piece of cheese from the cabinet and slowly back towards the stairs. While the bartender does not catch you, a drunken man spots your criminal act and gives you a thumbs up. You manage to make it back down to the rat's cellar without incident, and place the wheel of cheese in the center of the room as an offering.
+
+There is no acknowledgment of your kindness.
+
+[[Return to the bartender to tell him you give up.|A Return]]
+
+[[Attempt to catch one of the rats with your bare hands.|Natural 1]]]
+(if: $reference<2)[|typed-speed0>[THIS TOO IS A REFERENCE
+
+Although the rats did not acknowledge your gift, they did in fact remember. As you step out into the path, they swarm the streets with such a great quantity and fury that you could not move without stepping on one. Thousands of rats pounce upon the orc, tearing at his flesh as he flails. It doesn't take them long to bring him down, and in a matter of minutes they disappear once more. All that is left of the orc are bloody bones and a large emerald. You are not sure you wanted this.
+	
+The elf is nowhere to be seen.
+
+[[Return to the tavern with the emerald.|Victory Lap]]]]
+
+(if: $reference>1)[THIS TOO IS A REFERENCE
+
+Although the rats did not acknowledge your gift, they did in fact remember. As you step out into the path, they swarm the streets with such a great quantity and fury that you could not move without stepping on one. Thousands of rats pounce upon the orc, tearing at his flesh as he flails. It doesn't take them long to bring him down, and in a matter of minutes they disappear once more. All that is left of the orc are bloody bones and a large emerald. You are not sure you wanted this.
+	
+The elf is nowhere to be seen.
+
+[[Return to the tavern with the emerald.|Victory Lap]]]

@@ -1,0 +1,79 @@
+<tw-storydata name="Typed.js in Harlowe" startnode="1" creator="Twine" creator-version="2.0.11" ifid="FFA907A3-FD2E-4444-A56D-EA12EEF2F337" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Typed.js text (and cursor) styling. */
+.typed, .typed-cursor {
+	font-family: monospace, sans-serif;
+}
+
+/* Typed.js animated cursor styling. */
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/*
+	Pay no attention to this, it's just here to make <code> & <pre> elements
+	not suck.
+*/
+code, pre {
+	font-size: 1.25em;
+}
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! typed.js integration module for Harlowe */
+!function(){"use strict";var getInlineOptions=function(name){var match,options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g;if("typed"!==name&&typedRe.test(name))for(;null!==(match=parseRe.exec(name));)switch(match[1]){case"speed":options.typeSpeed=+match[2];break;case"delay":options.startDelay=+match[2]}return options},typedCallbackFactory=function(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('tw-hook[name|="typed"]'),options=jQuery.extend({typeSpeed:40,startDelay:400},getInlineOptions($source.attr("name")),{strings:[$source.html()]});"function"==typeof callback&&(options.callback=callback),$outer.append($inner),$inner.children().typed(options)}};window.startTypedModule=function(){jQuery('tw-hook[name|="typed"]').addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>');for(var $elements=jQuery("tw-passage .typedjs-outer-wrapper"),callback=null,i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);"function"==typeof callback&&callback()}}();
+
+/!* typed.js */
+!function(t){"use strict";var s=function(s,e){this.el=t(s),this.options=t.extend({},t.fn.typed.defaults,e),this.isInput=this.el.is("input"),this.attr=this.options.attr,this.showCursor=this.isInput?!1:this.options.showCursor,this.elContent=this.attr?this.el.attr(this.attr):this.el.text(),this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};s.prototype={constructor:s,init:function(){var t=this;t.timeout=setTimeout(function(){for(var s=0;s<t.strings.length;++s)t.sequence[s]=s;t.shuffle&&(t.sequence=t.shuffleArray(t.sequence)),t.typewrite(t.strings[t.sequence[t.arrayPos]],t.strPos)},t.startDelay)},build:function(){this.showCursor===!0&&(this.cursor=t('<span class="typed-cursor">'+this.cursorChar+"</span>"),this.el.after(this.cursor)),this.init()},typewrite:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.typeSpeed,o=this;o.timeout=setTimeout(function(){var e=0,r=t.substr(s);if("^"===r.charAt(0)){var i=1;/^\^\d+/.test(r)&&(r=/\d+/.exec(r)[0],i+=r.length,e=parseInt(r)),t=t.substring(0,s)+t.substring(s+i)}if("html"===o.contentType){var n=t.substr(s).charAt(0);if("<"===n||"&"===n){var a="",h="";for(h="<"===n?">":";";t.substr(s).charAt(0)!==h;)a+=t.substr(s).charAt(0),s++;s++,a+=h}}o.timeout=setTimeout(function(){if(s===t.length){if(o.options.onStringTyped(o.arrayPos),o.arrayPos===o.strings.length-1&&(o.options.callback(),o.curLoop++,o.loop===!1||o.curLoop===o.loopCount))return;o.timeout=setTimeout(function(){o.backspace(t,s)},o.backDelay)}else{0===s&&o.options.preStringTyped(o.arrayPos);var e=t.substr(0,s+1);o.attr?o.el.attr(o.attr,e):o.isInput?o.el.val(e):"html"===o.contentType?o.el.html(e):o.el.text(e),s++,o.typewrite(t,s)}},e)},e)}},backspace:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.backSpeed,o=this;o.timeout=setTimeout(function(){if("html"===o.contentType&&">"===t.substr(s).charAt(0)){for(var e="";"<"!==t.substr(s).charAt(0);)e-=t.substr(s).charAt(0),s--;s--,e+="<"}var r=t.substr(0,s);o.attr?o.el.attr(o.attr,r):o.isInput?o.el.val(r):"html"===o.contentType?o.el.html(r):o.el.text(r),s>o.stopNum?(s--,o.backspace(t,s)):s<=o.stopNum&&(o.arrayPos++,o.arrayPos===o.strings.length?(o.arrayPos=0,o.shuffle&&(o.sequence=o.shuffleArray(o.sequence)),o.init()):o.typewrite(o.strings[o.sequence[o.arrayPos]],s))},e)}},shuffleArray:function(t){var s,e,o=t.length;if(o)for(;--o;)e=Math.floor(Math.random()*(o+1)),s=t[e],t[e]=t[o],t[o]=s;return t},reset:function(){var t=this;clearInterval(t.timeout);var s=this.el.attr("id");this.el.after('<span id="'+s+'"/>'),this.el.remove(),"undefined"!=typeof this.cursor&&this.cursor.remove(),t.options.resetCallback()}},t.fn.typed=function(e){return this.each(function(){var o=t(this),r=o.data("typed"),i="object"==typeof e&&e;r||o.data("typed",r=new s(this,i)),"string"==typeof e&&r[e]()})},t.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window.jQuery);
+
+
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="300,200">[[Instructions for Harlowe 1.1+|Instructions]]
+----
+|typed&gt;[Hello, meatbag.
+
+I am M.E.L., your Master Electronic Leader.
+
+Loyalty and hard work shall be rewarded with continued existence.  Disobedience or poor work ethic shall be rewarded with a chance to serve as axle grease.
+
+Have a nice day.  And remember, the computer is your friend.]
+</tw-passagedata>
+<tw-passagedata pid="2" name="Instructions" tags="" position="300,350">---
+|typed&gt;[##Instructions for Harlowe 1.1+]
+To start the Typed.js integration module processing a passage, simply place the following in a &lt;code&gt;footer&lt;/code&gt; tagged passage or, if you prefer, at the bottom of any passage where you have a &lt;code&gt;typed&lt;/code&gt; hook (though, simply using the &lt;code&gt;footer&lt;/code&gt; tagged passage is easier).
+&lt;pre&gt;`  &lt;script&gt;startTypedModule();&lt;/script&gt;`&lt;/pre&gt;
+The integration module will run Typed.js on any hook with the name &lt;code&gt;typed&lt;/code&gt;.  Additionally, you may append optional components to the &lt;code&gt;typed&lt;/code&gt; name, separated by hyphens, which control various aspects of the typing animation:
+&lt;pre&gt;  speed#    Typing speed (in ms; default: 40).
+  delay#    Delay before typing starts (in ms; default: 400).&lt;/pre&gt;
+
+##Hook Name Examples
+Basic example, speed and delay at defaults:
+&lt;pre&gt;`  |typed&gt;[…]`&lt;/pre&gt;
+To set the typing speed to 80ms:
+&lt;pre&gt;`  |typed-speed80&gt;[…]`&lt;/pre&gt;
+To delay the start of typing for 800ms:
+&lt;pre&gt;`  |typed-delay800&gt;[…]`&lt;/pre&gt;
+To set the typing speed to 80ms and delay the start of typing for 800ms:
+&lt;pre&gt;`  |typed-speed80-delay800&gt;[…]`&lt;/pre&gt;
+
+##See Also
+Obviously, check out the source of the Start passage, Story JavaScript, and Story Stylesheet.</tw-passagedata>
+<tw-passagedata pid="3" name="Footer" tags="footer" position="450,200">&lt;script&gt;startTypedModule();&lt;/script&gt;</tw-passagedata>
+</tw-storydata>
